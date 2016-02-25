@@ -1,0 +1,57 @@
+
+
+
+//-----------------------------------\\
+// Iconset Generation
+//-----------------------------------\\
+
+@mixin icon($width: 50px, $height: 50px, $fill: currentColor, $padding: 0) {
+  width: $width;
+  height: $height;
+  fill: $fill;
+  padding: $padding;
+}
+
+%icon {
+  @include icon;
+}
+
+%icon--app {
+  @include icon($padding: 11px);
+}
+
+%icon--small {
+  @include icon(30px, 30px, currentColor);
+}
+
+
+
+//-----------------------------------\\
+// Iconset Default Classes
+//-----------------------------------\\
+
+.icon {
+  @extend %icon;
+}
+
+.icon--app {
+  @extend %icon--app;
+}
+
+.icon--small {
+  @extend %icon--small;
+}
+
+.icon--colored {
+  .icon-part--success {
+    fill: $brand-success;
+  }
+}
+
+.icon,
+.icon--app,
+.icon--small {
+  &:hover {
+    fill: $brand-primary;
+  }
+}

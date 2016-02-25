@@ -1,0 +1,122 @@
+
+
+
+//----------------------------------------\\
+// Button variables
+//----------------------------------------\\
+
+//////////////// text color, background, border color
+// The fields can be changed in base/generators
+$buttons: (
+  'secondary': (
+    $white,
+    $brand-secondary,
+    darken($brand-secondary, 5%)
+  ),
+  'dark': (
+    $white,
+    $brand-tertiary,
+    darken($brand-tertiary, 5%)
+  ),
+  'ghost': (
+    $brand-secondary,
+    transparent,
+    rgba($brand-secondary, 0.5)
+  ),
+  'ghost-white': (
+    $white,
+    transparent,
+    rgba($white, 0.25)
+  ),
+);
+
+//////////////// text color, background, border color
+// The fields can be changed in base/generators
+$button-hover-states: (
+  'to-danger': (
+    $white,
+    $brand-danger,
+    darken($brand-danger, 5%)
+  ),
+);
+
+
+
+//-----------------------------------------\\
+// # Button Generation
+//-----------------------------------------\\
+// REVIEW: Figure out what we actually need to reset accross input, button & a
+
+.btn {
+  // Generate btn--%{name} classes for default and hover states
+  @include gen-buttons();
+
+  // Default button styling
+  @include text-caption();
+
+  border-radius: $br;
+  background: darken($brand-primary, 5%);
+  border: 1px solid darken($brand-primary, 10%);
+  color: $white;
+  display: inline-block;
+  height: $form-height;
+  line-height: $form-height;
+  outline: none;
+  padding: 0 25px;
+  text-align: center;
+  vertical-align: top; // make sure <button> renders inline with <a>
+  text-decoration: none;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+
+  @include min-width($small-break) {
+    width: auto;
+    margin: 0;
+    display: inline-block;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    background: $brand-primary;
+    border-color: darken($brand-primary, 5%);
+    color: $white;
+    text-decoration: none;
+    outline: none;
+
+    transition: background 0.15s, border-color 0.15s, color 0.1s;
+  }
+
+  &:active {
+    background: darken($brand-primary, 15%);
+    border-color: darken($brand-primary, 20%);
+  }
+}
+
+// scss-lint:disable MergeableSelector
+// Needs to be here because of scss cascading
+.btn {
+  @include gen-button-hover();
+}
+
+
+
+
+//-----------------------------------------\\
+// # Custom buttons
+//-----------------------------------------\\
+
+.btn--disabled {
+  opacity: 0.3;
+
+  &:hover {
+    // scss-lint:disable DuplicateProperty
+    cursor: default;
+    cursor: not-allowed;
+  }
+}

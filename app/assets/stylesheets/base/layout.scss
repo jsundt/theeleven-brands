@@ -1,0 +1,28 @@
+
+
+
+//----------------------------------------\\
+// # Base Layout and grid
+//----------------------------------------\\
+
+body {
+  background: $off-white;
+}
+
+  //generate .bg--%{color} from color-variants list
+  .bg {
+    @include gen-bg-variants();
+  }
+
+.padding {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+  .padding--bottom {
+    padding-bottom: $padding;
+  }
+
+  .padding--top {
+    padding-top: $padding;
+  }
