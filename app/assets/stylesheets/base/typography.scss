@@ -6,8 +6,8 @@
 //-----------------------------------\\
 
 // Font Stacks
-$title-font: serif;
-$body-font: sans-serif;
+$title-font: 'helvetica neue', helvetica, arial, sans-serif;
+$body-font: $title-font;
 $mono-font: monospace;
 
 $title-line-height: 1.2;

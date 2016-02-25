@@ -1,0 +1,61 @@
+
+
+
+//----------------------------------------\\
+// Navbar stuff
+//----------------------------------------\\
+
+%nav-link {
+  @include text-note(negative);
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 1px;
+  text-decoration: none;
+
+  @include min-width($medium-break) {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.nav-logo {
+  @extend %nav-link;
+  background: $black;
+  flex-grow: 1;
+
+  @include min-width($medium-break) {
+    flex: none;
+  }
+}
+
+.nav-container {
+  display: none;
+
+  @include min-width($medium-break) {
+    display: block;
+  }
+}
+
+  .nav-link {
+    @extend %nav-link;
+    box-shadow: 0 1px 0 rgba($night, 0.2);
+  }
+
+
+.nav-mobile-links {
+  display: flex;
+  width: 50%;
+
+  @include min-width($medium-break) {
+    display: none;
+  }
+
+  .nav-link {
+    flex-grow: 1;
+  }
+}
