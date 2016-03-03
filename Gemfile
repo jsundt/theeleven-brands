@@ -12,7 +12,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 
-
+gem 'nokogiri'
 
 
 group :production do
