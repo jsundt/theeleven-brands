@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'rails', '>= 5.0.0.beta4', '< 5.1'
 gem 'puma'
 
 gem 'sass-rails', '~> 5.0'
@@ -14,12 +14,12 @@ gem 'autoprefixer-rails'
 
 gem 'nokogiri'
 # gem 'the_eleven-svg_inliner', github: 'jsundt/theeleven-svg_inliner'
+gem 'the_eleven-svg_inliner', path: '/Volumes/macStorage/GitHub/theeleven-svg_inliner'
 
 
 group :production do
   gem 'rails_12factor'
   gem 'heroku-deflater'
-
 end
 
 group :development, :test do
