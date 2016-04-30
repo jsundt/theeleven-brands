@@ -2,9 +2,9 @@
   <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <h2 class="text-lead<%= '--white' if defined? color %> text--left">Social and contact Icons</h2>
 
-    <%#= svg_icon('anim__mobile-menu', path: 'app' + asset_path('iconanim.svg')) %>
-    <%= svg_icon('anim__mobile-menu', path: 'app/assets/images/iconanim.svg') %>
-    <%= svg_icon('social__facebook', path: 'app/assets/images/iconset.svg') %>
+    <%= svg_icon('anim__mobile-menu') %>
+    <%= svg_icon('anim__mobile-menu', file: 'iconanim.svg') %>
+    <%= svg_icon('social__facebook', file: 'iconset.svg') %>
     <%= svg_icon('social__linkedin') %>
     <%= svg_icon('social__twitter') %>
     <%= svg_icon('social__phone') %>

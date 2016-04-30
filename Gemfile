@@ -13,8 +13,8 @@ gem 'jquery-rails'
 gem 'autoprefixer-rails'
 
 gem 'nokogiri'
-# gem 'the_eleven-svg_inliner', github: 'jsundt/theeleven-svg_inliner'
-gem 'the_eleven-svg_inliner', path: '/Volumes/macStorage/GitHub/theeleven-svg_inliner'
+gem 'the_eleven-svg_inliner', github: 'jsundt/theeleven-svg_inliner'
+# gem 'the_eleven-svg_inliner', path: '../theeleven-svg_inliner'
 
 
 group :production do
