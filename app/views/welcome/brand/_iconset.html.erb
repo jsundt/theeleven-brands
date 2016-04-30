@@ -2,26 +2,21 @@
   <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <h2 class="text-lead<%= '--white' if defined? color %> text--left">Social and contact Icons</h2>
 
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__facebook' %>"></use>
-    </svg>
+    <%= svg_icon('social__facebook', path: 'app/assets/images/iconset.svg') %>
+    <%= svg_icon('social__linkedin') %>
+    <%= svg_icon('social__twitter') %>
+    <%= svg_icon('social__phone') %>
+    <%= svg_icon('social__email') %>
+    <%= svg_icon('social__chat') %>
 
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__linkedin' %>"></use>
-    </svg>
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__twitter' %>"></use>
-    </svg>
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__phone' %>"></use>
-    </svg>
-
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__email' %>"></use>
-    </svg>
-
-    <svg class="icon">
-      <use xlink:href="<%= asset_path 'te-social-icons.svg#social__chat' %>"></use>
-    </svg>
+    <%= svg_icon('missing this one') %>
+    <%= svg_icon('social__chat', class: 'icon--app') %>
+    <%= svg_icon('social__linkedin', role: 'presentation') %>
+    <%= svg_icon('social__facebook', aria: false) %>
+  </div>
+</div>
+<div class="row padding--top">
+  <div class="col-xs-12">
+    <%#= each_svg_icon %>
   </div>
 </div>

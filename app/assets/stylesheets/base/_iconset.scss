@@ -10,6 +10,7 @@
   height: $height;
   fill: $fill;
   padding: $padding;
+  box-sizing: border-box;
 }
 
 %icon {
@@ -17,7 +18,7 @@
 }
 
 %icon--app {
-  @include icon($padding: 11px);
+  @include icon($padding: 10px);
 }
 
 %icon--small {

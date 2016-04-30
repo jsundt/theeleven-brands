@@ -1,3 +1,3 @@
 module ApplicationHelper
-  include SvgInlinerModule
+  include TheEleven::SvgInliner
 end

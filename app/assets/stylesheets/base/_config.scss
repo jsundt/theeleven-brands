@@ -47,6 +47,17 @@ $medium-break: 768px;  //bootstrap sm
 $big-break:    992px;  //bootstrap md
 $huge-break:   1200px; //bootstrap lg
 
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px,
+);
+
+$xs-break: break(xs);
+$sm-break: break(sm);
+$md-break: break(md);
+$lg-break: break(lg);
 
 
 //// TODO: setup proper / useful z-indexes

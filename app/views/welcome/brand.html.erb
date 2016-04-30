@@ -1,6 +1,6 @@
 <div class="page-header page-header--mp">
   <div class="container">
-    <!-- <div class="page-logo"></div> -->
+    <div class="page-logo"></div>
     <h1 class="text-title">makers of brands &amp; websites for the digital age</h1>
     <p class="text-note text--center">updated at</p>
   </div>
@@ -9,14 +9,19 @@
 <div class="padding bg--white">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <h1>Initial project brand guidelines</h1>
-        <p class="page-subtitle">Hi there <span class="emoji">😊</span> – This page is used for design and development</p>
-        <%= svg_icon('social__twitter') %>
-
-        <svg class="icon">
-          <use xlink:href="<%= asset_path 'te-social-icons.svg#social__facebook' %>"></use>
-        </svg>
+      <div class="col-xs-12 col-sm-3">
+        <p class="text-caption">Pitch</p>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <p class="text-body">Hi there <span class="emoji">😊</span> – This page is used for design and development</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <p class="text-caption">Iconset</p>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <%= render 'welcome/brand/each_icon' %>
       </div>
     </div>
   </div>
@@ -92,7 +97,7 @@
       </div>
     </div>
     <section class="text--white padding">
-      <%= render 'welcome/brand/iconset', color: 'white' %>
+      <%#= render 'welcome/brand/iconset', color: 'white' %>
     </section>
   </div>
 </section>
@@ -105,7 +110,7 @@
       </div>
     </div>
     <section class="padding">
-      <%= render 'welcome/brand/iconset' %>
+      <%#= render 'welcome/brand/iconset' %>
     </section>
   </div>
 </section>
