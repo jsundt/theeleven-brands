@@ -1,3 +1,34 @@
 <%= javascript_include_tag 'application' %>
 
+<script>
+  // $(document).on('te-pageLoaded', function(event) {
+  //   var company = event['company'];
+  //   window.history.pushState({ site: 'The Eleven Brands' }, company, "/brands/" + company);
+  // });
+  //
+  // window.onpopstate = function(event) {
+  //   console.log(event)
+  //   var popped = false;
+  //
+  //   if ( !popped ){
+  //     location.reload()
+  //     popper = true;
+  //   }
+  // };
+</script>
+
+
+<% if defined? @company %>
+  <% puts "company is defined as #{@company}" %>
+  <script>
+    $(document).on('ready', function() {
+      $.ajax({
+        url: "/brands/<%= @company %>"
+      })
+    });
+  </script>
+<% else %>
+  <% puts "company not defined" %>
+<% end %>
+
 <!-- Insert data tracking etc here -->

@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
 
-  root to: 'welcome#brand'
+  root to: 'welcome#home'
 
-  get 'home', to: 'welcome#home'
+  get 'brands', to: 'brands#show'
+  get 'brands/:company', to: 'brands#show'
 
 end
