@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require svg_inliner/svg4everybody
 //= require_tree .
+
+svg4everybody({
+  fallback: function (src, svg, use) {
+    return 'fallback.png'; // always return fallback.png
+  },
+  nosvg: false, // shiv <svg> and <use> elements and use image fallbacks (requires legacy version of svg4everybody)
+  polyfill: true // polyfill <use> elements for External Content
+});

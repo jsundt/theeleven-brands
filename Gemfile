@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta4', '< 5.1'
+gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 gem 'puma'
 
 gem 'sass-rails', '~> 5.0'
@@ -12,9 +12,12 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 
-gem 'nokogiri'
-gem 'the_eleven-svg_inliner', github: 'jsundt/theeleven-svg_inliner'
-# gem 'the_eleven-svg_inliner', path: '../theeleven-svg_inliner'
+
+# gem 'svg_inliner', github: 'jsundt/svg_inliner'
+gem 'svg_inliner', path: '../svg_inliner'
+
+# gem 'fenrir', github: 'jsundt/fenrir'
+gem 'fenrir', path: '../fenrir'
 
 
 group :production do

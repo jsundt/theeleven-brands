@@ -25,6 +25,9 @@
 
  @import 'base/layout';     // Base layout styles
 
+ @import 'core/**/*';
+ @import 'fenrir/awoken';
+
 
 // defaults and helpers loaded in application core as that's
 // useful in both core and async parts of the css

@@ -9,7 +9,7 @@
 
   <title>The Eleven Brands</title>
 
-  <%= stylesheet_link_tag 'application__core', media: 'all' %>
+  <%#= stylesheet_link_tag 'application__core', media: 'all' %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
 <!-- asset_path does not provide the correct link on heroku
@@ -26,15 +26,17 @@
 
 <body>
   <div class="page-wrapper">
-    <div class="nav-wrap">
-      <%= render 'shared/navbar' %>
-    </div>
+      <div class="nav-wrap">
+        <%= render 'shared/navbar' %>
 
-    <div class="content-wrap">
-      <%= yield %>
+        <div class="superdupernav"></div>
+      </div>
 
-      <%= render 'shared/footer' %>
-    </div>
+      <div class="content-wrap">
+        <%= yield %>
+
+        <%= render 'shared/footer' %>
+      </div>
   </div>
 
   <script>

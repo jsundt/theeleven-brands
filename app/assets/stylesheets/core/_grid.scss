@@ -9,11 +9,20 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
 }
 
 .page-wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
   .nav-wrap {
@@ -46,28 +55,3 @@ body {
       padding-bottom: 0;
     }
   }
-
-    .container {
-      margin: 0 auto;
-      width: 80%;
-    }
-
-      .row {
-        display: flex;
-      }
-
-        .col-xs-12 {
-          flex-grow: 12;
-        }
-
-        .col-sm-3 {
-          @include min-width($sm-break) {
-            flex-grow: 3;
-          }
-        }
-
-        .col-sm-9 {
-          @include min-width($sm-break) {
-            flex-grow: 9;
-          }
-        }

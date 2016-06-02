@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   root to: 'welcome#home'
 
   get 'brands', to: 'brands#show'
-  get 'brands/:company', to: 'brands#show'
+  get 'brands/:company/', to: 'brands#show'
 
 end
